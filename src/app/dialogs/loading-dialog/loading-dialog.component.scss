@@ -1,0 +1,35 @@
+@import '../../../../node_modules/@angular/flex-layout/mq';
+
+.dialog {
+  width: auto;
+  height: auto;
+  min-width: 16rem;
+  min-height: 4rem;
+
+  @include layout-bp(lt-sm) {
+    width: 80vw;
+    height: 10vh;
+  }
+}
+
+.text {
+  font-size: 1.2rem;
+  width: calc(100% - 4rem);
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+
+  &.success {
+    color: #42A948;
+  }
+
+  &.error {
+    color: #C20405;
+  }
+
+  &.info {
+    color: #0288D1;
+  }
+}

@@ -1,0 +1,15 @@
+<div mat-dialog-content class="dialog" fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="start center">
+  <ng-template [ngIf]="status=='LOADING'">
+    <mat-spinner diameter="40"></mat-spinner>
+  </ng-template>
+  <ng-template [ngIf]="status=='SUCCESS'">
+    <mat-icon svgIcon="success" class="icon success"></mat-icon>
+  </ng-template>
+  <ng-template [ngIf]="status=='ERROR'">
+    <mat-icon svgIcon="error" class="icon error"></mat-icon>
+  </ng-template>
+  <ng-template [ngIf]="status=='INFO'">
+    <mat-icon svgIcon="info" class="icon info"></mat-icon>
+  </ng-template>
+  <span class="text">{{text}}</span>
+</div>
