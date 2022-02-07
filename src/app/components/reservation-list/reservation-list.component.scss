@@ -1,0 +1,116 @@
+@import '../../../../node_modules/@angular/flex-layout/mq';
+
+.reservation-list {
+  &-body {
+    display: flex;
+    position: relative;
+    min-height: 100px;
+  }
+
+  &-table {
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+
+    .thumbnail {
+      height: 100%;
+      width: auto;
+      margin-top: .4rem;
+    }
+    .date {
+      color: #929292;
+    }
+    .title {
+      font-size: 1.2rem;
+      color: #4D4D4D;
+      margin: 0!important;
+
+      &.disabled {
+        color: #C4C4C4;
+      }
+    }
+    .stars {
+      margin-left: -.1rem;
+      margin-bottom: -.4rem;
+    }
+    .star {
+      height: 1.3rem;
+      width: 1.3rem;
+      margin-left: -.1rem;
+      color: #959595;
+
+      &.active {
+        color: #F6D015;
+      }
+    }
+    .heart {
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+
+      &.active {
+        color: #F10000;
+      }
+    }
+    .favorite {
+      padding: .5rem;
+
+      .title {
+        display: inline-block;
+        margin-right: .5rem;
+      }
+    }
+    .sort-by-select {
+      margin: 1rem 0 0 .5rem;
+    }
+  }
+}
+
+.sort-by-select {
+  @include layout-bp(lt-sm) {
+    width: 100%;
+  }
+
+  &-container {
+    background-color: white;
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+.sort-icon {
+  font-size: 1.4rem!important;
+  vertical-align: bottom!important;
+}
+.label {
+  font-size: 1.2rem;
+  position: relative;
+  top: -.2em;
+}
+
+.loading-spinner {
+  display: flex;
+  margin: auto;
+  z-index: 10;
+
+  &-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+}
+
+td {
+  padding: .5rem 1rem!important;
+}
+
+.white {
+  background-color: white;
+}
+
+.reservation-list-container {
+  padding: 0 1rem;
+}
