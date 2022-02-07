@@ -8,14 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 // Header components imports
-import { PageHeaderComponent } from './components/page-header/page-header.component';
-
-// Room components imports
-import { RoomCreateComponent } from './components/room-create/room-create.component';
-import { RoomEditComponent } from './components/room-edit/room-edit.component';
-import { RoomFormComponent } from './components/room-form/room-form.component';
-import { RoomListComponent } from './components/room-list/room-list.component';
-import { RoomService } from './services/room.service';
+import { PageHeaderComponent } from './shared/page-header/page-header.component';
 
 // Reservation components imports
 import { ReservationCreateComponent } from './components/reservation-create/reservation-create.component';
@@ -47,29 +40,25 @@ import { MatTableModule } from '@angular/material/table';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 // Auxiliary component and service to show dialog when performing server requests
-import { LoadingDialogComponent } from './dialogs/loading-dialog/loading-dialog.component';
-import { DialogService } from './dialogs/dialog.service';
+import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
+import { DialogService } from './services/dialog.service';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {AuthService} from './auth/auth.service';
 import { ReservationAvailabilityComponent } from './components/reservation-availability/reservation-availability.component';
 import {MatCardModule} from '@angular/material/card';
 import {AuthInterceptor, DEFAULT_TIMEOUT} from './auth/auth.interceptor';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageHeaderComponent,
     ReservationListComponent,
     ReservationCreateComponent,
     ReservationEditComponent,
     ReservationFormComponent,
-    RoomCreateComponent,
-    RoomListComponent,
-    RoomEditComponent,
-    RoomFormComponent,
-    LoadingDialogComponent,
     LoginComponent,
+    LoadingDialogComponent,
     RegisterComponent,
     ReservationAvailabilityComponent,
   ],
@@ -101,14 +90,14 @@ import {AuthInterceptor, DEFAULT_TIMEOUT} from './auth/auth.interceptor';
     // Rich text editor module
     CKEditorModule,
     ReactiveFormsModule,
+    SharedModule,
   ],
   // No entry component declaration needed since Angular 9.0.0,
   // Therefore there is not need to add LoadingDialogComponent to entryComponents array
   providers: [
     AuthService,
-    ReservationService,
-    RoomService,
     DialogService,
+    ReservationService,
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: DEFAULT_TIMEOUT, useValue: 60000}

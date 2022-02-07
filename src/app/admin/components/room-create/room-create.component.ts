@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Room } from '../../models/room.model';
+import { Room } from '../../../models/room.model';
 import { RoomService } from '../../services/room.service';
-import { DialogService } from '../../dialogs/dialog.service';
+import { DialogService } from '../../../services/dialog.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -31,7 +31,7 @@ export class RoomCreateComponent implements OnInit {
     this.roomService.create(this.room).subscribe(() => {
       this.dialogService.updateLoadingDialogData('Room created successfully', 'SUCCESS');
       this.dialogService.closeLoadingDialogAfterTimeout();
-      this.router.navigate(['/room-list']);
+      this.router.navigate(['admin/room-list']);
     }, (error) => {
       this.dialogService.updateLoadingDialogData('Error creating room', 'ERROR');
       this.dialogService.closeLoadingDialogAfterTimeout();

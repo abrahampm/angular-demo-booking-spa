@@ -15,11 +15,11 @@
         Place Reservation
       </button>
       <ng-template [ngIf]="authService.isAdmin() | async">
-        <button mat-flat-button routerLink="/room-list">
+        <button mat-flat-button routerLink="/admin/room-list">
           <mat-icon>hotel</mat-icon>
           Room List
         </button>
-        <button mat-flat-button routerLink="/create-room">
+        <button mat-flat-button routerLink="/admin/create-room">
           <mat-icon>add_business</mat-icon>
           Create Room
         </button>

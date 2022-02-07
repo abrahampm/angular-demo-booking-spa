@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Reservation} from '../../models/reservation.model';
 import {ReservationService} from '../../services/reservation.service';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../services/dialog.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

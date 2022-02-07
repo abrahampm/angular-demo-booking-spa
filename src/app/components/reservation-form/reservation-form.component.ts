@@ -5,7 +5,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {ReservationService} from '../../services/reservation.service';
 import {Room, ROOM_TYPE_DESCRIPTION} from '../../models/room.model';
 import {BehaviorSubject} from 'rxjs';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../services/dialog.service';
 import {debounceTime} from 'rxjs/operators';
 
 @Component({

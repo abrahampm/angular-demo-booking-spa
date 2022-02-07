@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Room } from '../../models/room.model';
+import { Room } from '../../../models/room.model';
 import {RoomService} from '../../services/room.service';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../../services/dialog.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -44,7 +44,7 @@ export class RoomEditComponent implements OnInit {
     this.roomService.update(this.room).subscribe(() => {
       this.dialogService.updateLoadingDialogData('Room updated successfully', 'SUCCESS');
       this.dialogService.closeLoadingDialogAfterTimeout();
-      this.router.navigate(['/room-list']);
+      this.router.navigate(['admin/room-list']);
     }, (error) => {
       this.dialogService.updateLoadingDialogData('Error updating room', 'ERROR');
       this.dialogService.closeLoadingDialogAfterTimeout();

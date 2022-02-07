@@ -1,6 +1,6 @@
 import { DataSource } from '@angular/cdk/collections';
 import {Observable, BehaviorSubject, of, merge} from 'rxjs';
-import {Room} from '../../models/room.model';
+import {Room} from '../../../models/room.model';
 import {RoomService} from '../../services/room.service';
 import {catchError, finalize, tap} from 'rxjs/operators';
 import {MatSort} from '@angular/material/sort';

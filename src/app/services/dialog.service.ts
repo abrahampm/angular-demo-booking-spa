@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { LoadingDialogComponent } from './loading-dialog/loading-dialog.component';
+import { LoadingDialogComponent } from '../components/loading-dialog/loading-dialog.component';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({

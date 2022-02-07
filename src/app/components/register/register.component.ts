@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ApplicationUser} from '../../models/application-user.model';
 import {AuthService} from '../../auth/auth.service';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../services/dialog.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

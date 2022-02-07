@@ -2,9 +2,9 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
-import {Room, ROOM_TYPE_DESCRIPTION} from '../../models/room.model';
+import {Room, ROOM_TYPE_DESCRIPTION} from '../../../models/room.model';
 import {RoomService} from '../../services/room.service';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../../services/dialog.service';
 import {RoomListDataSource} from './room-list-data.source';
 
 

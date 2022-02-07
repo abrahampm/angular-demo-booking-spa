@@ -4,7 +4,7 @@ import {ReservationService} from '../../services/reservation.service';
 import {Room, ROOM_TYPE_DESCRIPTION} from '../../models/room.model';
 import {Observable, Subject} from 'rxjs';
 import {catchError, map, switchMap} from 'rxjs/operators';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../services/dialog.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 

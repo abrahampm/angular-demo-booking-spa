@@ -5,7 +5,7 @@ import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from '../../auth/auth.service';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../services/dialog.service';
 
 @Component({
   selector: 'app-login',

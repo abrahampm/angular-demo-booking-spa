@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {API_URL} from '../app.settings';
-import {Room} from '../models/room.model';
+import {API_URL} from '../../app.settings';
+import {Room} from '../../models/room.model';
 import {map} from 'rxjs/operators';
 
 @Injectable({

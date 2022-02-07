@@ -7,7 +7,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Reservation } from '../../models/reservation.model';
 import {ReservationService} from '../../services/reservation.service';
-import {DialogService} from '../../dialogs/dialog.service';
+import {DialogService} from '../../services/dialog.service';
 import {AuthService} from '../../auth/auth.service';
 import {Room, ROOM_TYPE_DESCRIPTION} from '../../models/room.model';
 

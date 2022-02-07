@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, switchMap } from 'rxjs/operators';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import {Room, ROOM_TYPE_DESCRIPTION} from '../../models/room.model';
+import {Room, ROOM_TYPE_DESCRIPTION} from '../../../models/room.model';
 import { RoomService } from '../../services/room.service';
 
 @Component({
