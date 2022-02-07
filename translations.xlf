@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4c4d10c5d64e0e7eac295f9e4ab0eab641dd7cc6" datatype="html">
+        <source> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/page-header/page-header.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8fb01dc4f76e3c9b28071a376829a1602d71079" datatype="html">
+        <source>Create room</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-create/room-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fa7b66a6e14c6f7620b04ac1c175dd18ea756ba7" datatype="html">
+        <source>Reservation List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-create/room-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-edit/room-edit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-create/reservation-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-edit/reservation-edit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-list/reservation-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8bb8434ba5d230d12631469005afd41076b1f508" datatype="html">
+        <source> Create </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-create/room-create.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1ea0f57fc3a399ee8ae6ab862877beb127291868" datatype="html">
+        <source>Edit room</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-edit/room-edit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3618ef2afb7155cd662abdd58c4929919f907b25" datatype="html">
+        <source> Update </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-edit/room-edit.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-edit/reservation-edit.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e15696a8b17897c911f63589be15bf628ff5b91b" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon svgIcon=&quot;people&quot;&gt;"/><x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;
+      "/> Room Number </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-form/room-form.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee6b1f617dd5320b23fbed018c38ac092db5e40a" datatype="html">
+        <source>Single</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-form/room-form.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52e093f031914ca7e106736561510c494d385061" datatype="html">
+        <source>Double</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-form/room-form.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3a0a6dd0d0b0fc4b004964391f1a3b9b78ba5d7b" datatype="html">
+        <source>Triple</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-form/room-form.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f50a33d3c339f8f4a465141f8caa5d2d8c005251" datatype="html">
+        <source>Enabled</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-form/room-form.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f39256070bfc0714020dfee08895421fc1527014" datatype="html">
+        <source>Disabled</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-form/room-form.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fbcb0d75afbe6aec04269381598a737f4bd19db7" datatype="html">
+        <source>Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="240c9c1e96dc38814922a83ad041dc815b084f32" datatype="html">
+        <source>type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b767a73d9da852eee7dae0bd0522f59c35e01f7" datatype="html">
+        <source> Edit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="17c7bc4ead8a8d8180ca9fe6b865d5ccc1290694" datatype="html">
+        <source> Delete </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
+        <source>Edit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/room-list/room-list.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b873b6951738d7d36fae7e60d937c68a16294644" datatype="html">
+        <source>Create Reservation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-create/reservation-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-list/reservation-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="df20df23f79af39c789cb295018a60c9ea3de458" datatype="html">
+        <source> Send </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-create/reservation-create.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a2b31ae7fd7bc75660e960dcb05ed95dd988732e" datatype="html">
+        <source>Edit reservation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-edit/reservation-edit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ad06e423b1f8eeaf8216c155dd83b1e46f21dc5" datatype="html">
+        <source>Date ascending</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-list/reservation-list.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d76a41f911a716dfd911cf19080b3705a981f0bb" datatype="html">
+        <source>Date descending</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-list/reservation-list.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c290568d8aae1c3acdc160a8d3a7023581b02593" datatype="html">
+        <source>Select reservation start and end date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-form/reservation-form.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="77bbe324b08f6636fb50f673cea05313b86fb692" datatype="html">
+        <source>Start date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-form/reservation-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f60960faa2cd3e0db11e48688774d05dfa9d715b" datatype="html">
+        <source>End date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/reservation-form/reservation-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

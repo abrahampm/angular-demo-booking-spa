@@ -1,0 +1,44 @@
+@import '~@angular/flex-layout/mq';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ck-editor__editable_inline {
+  min-height: 40vh;
+}
+
+// Mat Table and Mat Expansion Panel Style Overrides
+@include layout-bp(lt-sm) {
+  .mat-expansion-panel-header {
+    padding: 0 1rem!important;
+  }
+  .mat-expansion-panel-body {
+    padding: 0!important;
+  }
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell {
+    padding-right: .5rem!important;
+
+    &:first-of-type {
+      padding-left: 1rem!important;
+    }
+    &:last-of-type {
+      padding-right: 1rem!important;
+    }
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  background-color: #9F9F9F;
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+}
+
+h1, h3, p {
+  margin: 0;
+}
