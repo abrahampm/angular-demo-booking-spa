@@ -1,0 +1,62 @@
+<form #roomForm="ngForm" fxLayout="row" fxLayoutGap="1rem" class="room-form" style="margin: 1rem;">
+  <mat-form-field appearance="fill">
+    <mat-label i18n>
+      <mat-icon svgIcon="people"></mat-icon>
+      Room Number
+    </mat-label>
+    <input type="text"
+           name="number"
+           min="1"
+           required
+           matInput
+           [(ngModel)]="room.number"
+           [disabled]="disabled">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>
+      <mat-icon svgIcon="globe" i18n></mat-icon>
+      Room type
+    </mat-label>
+    <mat-select
+      name="type"
+      required
+      [(ngModel)]="room.type"
+      [disabled]="disabled">
+      <mat-option [value]="1" i18n>{{getRoomTypeDescription(1)}}</mat-option>
+      <mat-option [value]="2" i18n>{{getRoomTypeDescription(2)}}</mat-option>
+      <mat-option [value]="3" i18n>{{getRoomTypeDescription(3)}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>
+      <mat-icon svgIcon="globe" i18n></mat-icon>
+      Room capacity
+    </mat-label>
+    <input type="number"
+           name="capacity"
+           required
+           matInput
+           min="1"
+           [(ngModel)]="room.capacity"
+           [disabled]="disabled">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>
+      <mat-icon svgIcon="globe" i18n></mat-icon>
+      Room status
+    </mat-label>
+    <mat-select
+      name="status"
+      required
+      [(ngModel)]="room.status"
+      [disabled]="disabled">
+      <mat-option [value]="1" i18n>Enabled</mat-option>
+      <mat-option [value]="0" i18n>Disabled</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+</form>

@@ -1,0 +1,29 @@
+@import '../../../../node_modules/@angular/flex-layout/mq';
+
+.room-form {
+  background-color: white;
+  padding: 1rem 1rem 0 1rem;
+  flex-wrap: wrap;
+
+  mat-icon {
+    vertical-align: bottom;
+    font-size: 1rem;
+  }
+
+  mat-form-field {
+    width: calc(25% - .75rem);
+
+    @include layout-bp(lt-lg) {
+      width: calc(50% - .5rem);
+      &:nth-child(2) {
+        margin-right: 0!important;
+      }
+    }
+    @include layout-bp(xs) {
+      width: 100%;
+      margin-right: 0!important;
+    }
+
+  }
+
+}
