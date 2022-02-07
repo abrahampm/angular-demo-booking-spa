@@ -1,0 +1,40 @@
+@import '../../../../node_modules/@angular/flex-layout/mq';
+
+.table-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  overflow: auto;
+}
+
+.loading-spinner {
+  display: flex;
+  margin: auto;
+  z-index: 10;
+
+  &-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+@include layout-bp(lt-sm) {
+  .button {
+    padding: 0 .4rem;
+    min-width: unset;
+    background-color: initial;
+    color: initial;
+  }
+
+}

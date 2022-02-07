@@ -1,0 +1,70 @@
+<app-page-header></app-page-header>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%" class="white room-list-container">
+    <div class="table-container">
+
+      <div class="loading-spinner-container" *ngIf="dataSource.loading | async">
+        <div class="loading-spinner">
+          <mat-spinner diameter="40"></mat-spinner>
+        </div>
+      </div>
+
+      <table mat-table class="no-wrap full-width" matSort aria-label="Elements">
+        <!-- Number Column -->
+        <ng-container matColumnDef="number" sticky>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header i18n>Room Number</th>
+          <td mat-cell *matCellDef="let row">{{row.number}}</td>
+        </ng-container>
+
+        <!-- Type Column -->
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header i18n>Room Type</th>
+          <td mat-cell *matCellDef="let row">{{getRoomTypeDescription(row)}}</td>
+        </ng-container>
+
+        <!-- Capacity Column -->
+        <ng-container matColumnDef="capacity">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header i18n>Room Capacity</th>
+          <td mat-cell *matCellDef="let row">{{row.capacity}}</td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header i18n>Room Status</th>
+          <td mat-cell *matCellDef="let row">{{row.status ? 'Enabled' : 'Disabled'}}</td>
+        </ng-container>
+
+        <!-- Edit Button Column -->
+        <ng-container matColumnDef="edit-button">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let row">
+            <a mat-flat-button class="button" [routerLink]="['/edit-room', row.id]" i18n>
+              Edit
+            </a>
+          </td>
+        </ng-container>
+
+        <!-- Delete Button Column -->
+        <ng-container matColumnDef="delete-button">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-flat-button class="button" (click)="onDeleteRoom(row)" i18n>
+              Delete
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <mat-paginator #paginator
+                   [pageIndex]="0"
+                   [pageSize]="10"
+                   [pageSizeOptions]="[5, 10, 20, 50, 100]">
+    </mat-paginator>
+  </div>
+</div>
+
+
+
