@@ -1,0 +1,89 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100vh">
+  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="40%" fxFlex.md="60%" fxFlex.sm="80%" fxFlex.xs="100%" class="mat-elevation-z3 white register-form-container">
+    <div fxLayout="row" fxFlexAlign="center">
+      <h1 i18n>Please register to continue</h1>
+    </div>
+    <div fxLayout="row">
+      <form #registerForm="ngForm" fxLayout="column" fxLayoutGap="1rem" fxFlex="100%" class="register-form">
+        <mat-form-field appearance="fill">
+          <mat-label i18n>
+            Email
+          </mat-label>
+          <input matInput
+                 type="email"
+                 name="email"
+                 required
+                 [(ngModel)]="applicationUser.email">
+        </mat-form-field>
+
+        <div fxLayout="column" fxLayout.gt-md="row" fxLayoutGap="0" fxLayoutGap.gt-md="1rem" fxFlex="1 1 0">
+          <mat-form-field appearance="fill" fxFlex="1 1 0">
+            <mat-label i18n>
+              First Name
+            </mat-label>
+            <input matInput
+                   type="text"
+                   name="firstName"
+                   required
+                   [(ngModel)]="applicationUser.firstName">
+          </mat-form-field>
+          <mat-form-field appearance="fill" fxFlex="1 1 0">
+            <mat-label i18n>
+              Last Name
+            </mat-label>
+            <input matInput
+                   type="text"
+                   name="lastName"
+                   required
+                   [(ngModel)]="applicationUser.lastName">
+          </mat-form-field>
+        </div>
+
+
+
+        <mat-form-field appearance="fill">
+          <mat-label i18n>Birth Date</mat-label>
+          <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="birthDatePicker"
+                 name="birthDate"
+                 placeholder="Birth Date"
+                 i18n-placeholder
+                 required
+                 [(ngModel)]="applicationUser.birthDate">
+          <mat-datepicker #birthDatePicker startView="multi-year"></mat-datepicker>
+          <mat-datepicker-toggle matPrefix [for]="birthDatePicker"></mat-datepicker-toggle>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label i18n>
+            Password
+          </mat-label>
+          <input matInput
+                 type="password"
+                 name="password"
+                 required
+                 [(ngModel)]="applicationUser.password">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label i18n>
+            Confirm Password
+          </mat-label>
+          <input matInput
+                 type="password"
+                 name="passwordConfirm"
+                 required ngModel>
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutAlign="center">
+          <button mat-flat-button class="button" color="primary" fxFlex="100%" (click)="onRegister()" i18n>
+            Register
+          </button>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center">
+          <p i18n>Already have an account? <button mat-flat-button (click)="navigateToLogin()">Sign in</button>.</p>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
