@@ -1,0 +1,13 @@
+<app-page-header></app-page-header>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%" class="white reservation-start-container">
+    <div fxLayout="row">
+      <app-room-form [(room)]="room" (formStatusChange)="onRoomFormStatusChanged($event)" [disabled]="!roomInformationLoaded" fxFlex="1 1 0"></app-room-form>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end start">
+      <button mat-flat-button class="button" color="primary" (click)="onUpdateRoom()" [disabled]="roomFormStatus!='VALID'" i18n>
+        Update Room
+      </button>
+    </div>
+  </div>
+</div>
