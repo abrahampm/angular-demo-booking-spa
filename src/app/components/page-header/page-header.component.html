@@ -1,0 +1,49 @@
+<header fxLayout="row" fxLayoutAlign="center" class="page-header-container">
+  <div fxLayout="row" fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%"
+       fxLayoutAlign="space-between start" class="page-header">
+    <div fxLayout="row">
+      <button mat-flat-button routerLink="/">
+        <mat-icon>home</mat-icon>
+        Home
+      </button>
+      <button mat-flat-button routerLink="/reservation-list">
+        <mat-icon>event_note</mat-icon>
+        Reservation List
+      </button>
+      <button mat-flat-button routerLink="/place-reservation">
+        <mat-icon>event</mat-icon>
+        Place Reservation
+      </button>
+      <ng-template [ngIf]="authService.isAdmin() | async">
+        <button mat-flat-button routerLink="/room-list">
+          <mat-icon>hotel</mat-icon>
+          Room List
+        </button>
+        <button mat-flat-button routerLink="/create-room">
+          <mat-icon>add_business</mat-icon>
+          Create Room
+        </button>
+      </ng-template>
+
+    </div>
+
+    <div fxLayout="row">
+      <ng-template [ngIf]="!(authService.isAuthenticated() | async)">
+        <button mat-flat-button routerLink="/login" fxFlexAlign="end">
+          Sign In
+        </button>
+        <button mat-stroked-button color="primary" routerLink="/register">
+          <mat-icon>person_add</mat-icon>
+          Sign Up
+        </button>
+      </ng-template>
+      <ng-template [ngIf]="authService.isAuthenticated() | async">
+        <button mat-flat-button routerLink="/login" fxFlexAlign="end">
+          <mat-icon *ngIf="authService.isAdmin() | async">admin_panel_settings</mat-icon>
+          <mat-icon *ngIf="!(authService.isAdmin() | async)">account_circle</mat-icon>
+          {{ (authService.user$ | async).email }}
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</header>
