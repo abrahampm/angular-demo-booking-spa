@@ -1,0 +1,48 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100vh">
+  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="40%" fxFlex.md="60%" fxFlex.sm="80%" fxFlex.xs="100%" class="mat-elevation-z3 white login-form-container">
+    <div fxLayout="row" fxFlexAlign="center">
+      <mat-icon svgIcon="person" class="login-icon"></mat-icon>
+    </div>
+    <div fxLayout="row" fxFlexAlign="center">
+      <h1 i18n>Please login to continue</h1>
+    </div>
+    <div fxLayout="row">
+      <form #loginForm="ngForm" fxLayout="column" fxLayoutGap="1rem" fxFlex="100%" class="login-form">
+        <mat-form-field appearance="fill">
+          <mat-label i18n>
+            Email
+          </mat-label>
+          <input matInput
+                 type="email"
+                 name="email"
+                 required
+                 matInput
+                 [(ngModel)]="applicationUser.email">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label i18n>
+            Password
+          </mat-label>
+          <input matInput
+                 type="password"
+                 name="password"
+                 required
+                 matInput
+                 [(ngModel)]="applicationUser.password">
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutAlign="end start">
+          <button mat-flat-button fxFlex="100%" class="button" color="primary" (click)="onLogin()" i18n>
+            Login
+          </button>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center">
+          <p i18n>Don't have an account? <button mat-flat-button (click)="navigateToRegister()">Register</button>.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
