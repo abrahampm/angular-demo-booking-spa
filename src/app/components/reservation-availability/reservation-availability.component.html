@@ -1,0 +1,76 @@
+<app-page-header></app-page-header>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%" class="white reservation-availability-container">
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <div fxLayout="column">
+        <img src="assets/cancun-1.jpg" height="300" alt="Cancun">
+      </div>
+    </div>
+    <div fxLayout="column">
+      <h1 i18n>Book your next stay in Cancun</h1>
+      <h4 i18n>All-inclusive, beachfront, king suites and much more...</h4>
+    </div>
+    <div fxLayout="row" fxLayoutGap.gt-md="1rem">
+      <mat-form-field appearance="fill" fxFlex="1 1 0">
+        <mat-label>
+          Hotel
+        </mat-label>
+        <mat-select value="default-hotel"
+                    name="hotel">
+          <mat-option value="default-hotel" i18n>Very Last Beach Resort - Cancun</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="width: 15rem">
+        <mat-label i18n>Check In - Check Out</mat-label>
+        <mat-date-range-input required [min]="minDate" [max]="maxDate" [formGroup]="dateRange" [rangePicker]="picker">
+          <input matStartDate
+                 name="start-date"
+                 formControlName="start"
+                 placeholder="Start date"
+                 i18n-placeholder
+                 required>
+          <input matEndDate
+                 name="end-date"
+                 formControlName="end"
+                 placeholder="End date"
+                 i18n-placeholder
+                 required>
+        </mat-date-range-input>
+        <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+      <div fxLayout="row" fxLayoutAlign="end start">
+        <a mat-flat-button class="button reservation-availability-check" color="primary" (click)="onAvailabilityCheck()" i18n>
+          Check Availability
+        </a>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutGap=".5rem">
+      <ng-template ngFor let-room [ngForOf]="availableRooms | async">
+          <div fxLayout="row" class="room-element">
+            <div fxLayout="column" fxLayoutAlign="space-between" fxFlex="1 1 0">
+              <h4>{{getRoomTypeDescription(room)}} - {{room.number}}</h4>
+              <div fxLayout="row" fxLayoutGap=".5rem">
+                <mat-icon>bed</mat-icon>
+                <mat-icon>wifi</mat-icon>
+                <mat-icon>ac_unit</mat-icon>
+              </div>
+            </div>
+            <div fxLayout="column">
+              <a mat-flat-button class="button" color="primary" (click)="onPlaceReservation(room)" i18n>
+                Reserve
+              </a>
+            </div>
+          </div>
+      </ng-template>
+    <ng-template>
+      <div fxLayout="row" fxLayoutAlign="start">
+        <mat-card fxLayout="row" fxLayoutAlign="start center" i18n>
+          <mat-icon color="warn" style="margin-right: .5rem">info_outline</mat-icon>Check the latest COVID-19 restrictions before you travel.
+        </mat-card>
+      </div>
+    </ng-template>
+    </div>
+  </div>
+</div>
+
