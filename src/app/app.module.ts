@@ -8,7 +8,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 // Header components imports
-import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 
 // Room components imports
@@ -60,7 +59,6 @@ import {AuthInterceptor, DEFAULT_TIMEOUT} from './auth/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    MainHeaderComponent,
     PageHeaderComponent,
     ReservationListComponent,
     ReservationCreateComponent,
