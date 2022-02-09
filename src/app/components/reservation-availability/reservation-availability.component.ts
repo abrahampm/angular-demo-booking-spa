@@ -44,20 +44,23 @@ export class ReservationAvailabilityComponent implements OnInit {
       this.dialogService.closeLoadingDialogAfterTimeout();
       return;
     }
+    this.dialogService.openLoadingDialog('Checking room availability');
     const startDate = this.dateRange.value.start.toISOString();
     const endDate = this.dateRange.value.end.toISOString();
     this.reservationService.availability(startDate, endDate).subscribe(
       (rooms) => {
         if (rooms.length === 0) {
-          this.dialogService.openLoadingDialog('There are not rooms available in that dates. Please try again.', 'ERROR');
+          this.dialogService.updateLoadingDialogData('There are not rooms available in that dates. Please try again.', 'ERROR');
           this.dialogService.closeLoadingDialogAfterTimeout();
+        } else {
+          this.dialogService.closeLoadingDialog();
         }
         this.availableRooms.next(rooms);
       }, (e) => {
         if (e?.error.hasOwnProperty('status') && e.error.status === 'Error') {
-          this.dialogService.openLoadingDialog(e.error.message, 'ERROR');
+          this.dialogService.updateLoadingDialogData(e.error.message, 'ERROR');
         } else {
-          this.dialogService.openLoadingDialog('Network or server error occurred. Please try again.', 'ERROR');
+          this.dialogService.updateLoadingDialogData('Network or server error occurred. Please try again.', 'ERROR');
         }
         this.dialogService.closeLoadingDialogAfterTimeout();
       }

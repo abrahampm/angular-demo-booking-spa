@@ -19,6 +19,7 @@
 h1 {
   margin-top: 1rem;
   font-size: 28pt;
+  line-height: 3rem;
 }
 
 h4 {
@@ -31,4 +32,9 @@ h4 {
 
 .room-element:hover {
   background-color: #eeeeee;
+}
+@media (max-width: 767.98px) {
+  .reservation-availability-check {
+    width: 100%;
+  }
 }
