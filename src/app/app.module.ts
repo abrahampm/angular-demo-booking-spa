@@ -48,7 +48,6 @@ import {AuthService} from './auth/auth.service';
 import { ReservationAvailabilityComponent } from './components/reservation-availability/reservation-availability.component';
 import {MatCardModule} from '@angular/material/card';
 import {AuthInterceptor, DEFAULT_TIMEOUT} from './auth/auth.interceptor';
-import {SharedModule} from './shared/shared.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
