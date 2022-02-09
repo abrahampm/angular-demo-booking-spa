@@ -7,9 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
-// Header components imports
-import { PageHeaderComponent } from './shared/page-header/page-header.component';
-
 // Reservation components imports
 import { ReservationCreateComponent } from './components/reservation-create/reservation-create.component';
 import { ReservationEditComponent } from './components/reservation-edit/reservation-edit.component';
