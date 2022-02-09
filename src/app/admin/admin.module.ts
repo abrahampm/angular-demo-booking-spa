@@ -6,7 +6,6 @@ import {RoomCreateComponent} from './components/room-create/room-create.componen
 import {RoomListComponent} from './components/room-list/room-list.component';
 import {RoomEditComponent} from './components/room-edit/room-edit.component';
 import {RoomFormComponent} from './components/room-form/room-form.component';
-import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -24,9 +23,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {BrowserModule} from '@angular/platform-browser';
-import {SharedModule} from '../shared/shared.module';
 
 
 
