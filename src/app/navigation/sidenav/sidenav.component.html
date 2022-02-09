@@ -1,0 +1,22 @@
+<mat-nav-list class="sidenav-list">
+  <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+    <mat-icon>home</mat-icon><span class="nav-caption" i18n>Home</span>
+  </a>
+  <a mat-list-item routerLink="/reservation-list" (click)="onSidenavClose()">
+    <mat-icon>event_note</mat-icon><span class="nav-caption" i18n>Reservation List</span>
+  </a>
+  <a mat-list-item routerLink="/place-reservation" (click)="onSidenavClose()">
+    <mat-icon>event</mat-icon><span class="nav-caption" i18n>Place Reservation</span>
+  </a>
+  <ng-template [ngIf]="authService.isAdmin() | async">
+    <a mat-list-item routerLink="/admin/room-list" (click)="onSidenavClose()">
+      <mat-icon>hotel</mat-icon><span class="nav-caption" i18n>Room List</span>
+    </a>
+    <a mat-list-item routerLink="/admin/create-room" (click)="onSidenavClose()">
+      <mat-icon>add_business</mat-icon><span class="nav-caption" i18n>Create Room</span>
+    </a>
+  </ng-template>
+  <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+    <mat-icon>home</mat-icon><span class="nav-caption" i18n>Home</span>
+  </a>
+</mat-nav-list>

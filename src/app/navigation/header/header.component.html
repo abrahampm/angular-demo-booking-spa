@@ -1,0 +1,47 @@
+<mat-nav-list fxLayout="row" class="horizontal">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onSidenavToggle()" class="menu-icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div fxHide.lt-sm fxLayout="row" fxFlex="1 1 0" fxLayoutAlign="space-between center">
+    <div fxLayout="row">
+      <a mat-list-item routerLink="/home">
+        <mat-icon>home</mat-icon><span class="nav-caption" i18n>Home</span>
+      </a>
+      <a mat-list-item routerLink="/reservation-list">
+        <mat-icon>event_note</mat-icon><span class="nav-caption" i18n>Reservation List</span>
+      </a>
+      <a mat-list-item routerLink="/place-reservation">
+        <mat-icon>event</mat-icon><span class="nav-caption" i18n>Place Reservation</span>
+      </a>
+      <ng-template [ngIf]="authService.isAdmin() | async">
+        <a mat-list-item routerLink="/admin/room-list">
+          <mat-icon>hotel</mat-icon><span class="nav-caption" i18n>Room List</span>
+        </a>
+        <a mat-list-item routerLink="/admin/create-room">
+          <mat-icon>add_business</mat-icon><span class="nav-caption" i18n>Create Room</span>
+        </a>
+      </ng-template>
+    </div>
+    <div fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="start" style="margin-right: 2.2rem">
+      <ng-template [ngIf]="!(authService.isAuthenticated() | async)">
+        <button mat-flat-button routerLink="/login">
+          <mat-icon>login</mat-icon>
+          Sign In
+        </button>
+        <button mat-stroked-button color="primary" routerLink="/register">
+          <mat-icon>person_add</mat-icon>
+          Sign Up
+        </button>
+      </ng-template>
+      <ng-template [ngIf]="authService.isAuthenticated() | async">
+        <button mat-flat-button>
+          <mat-icon *ngIf="authService.isAdmin() | async">admin_panel_settings</mat-icon>
+          <mat-icon *ngIf="!(authService.isAdmin() | async)">account_circle</mat-icon>
+          {{ (authService.user$ | async).email }}
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</mat-nav-list>

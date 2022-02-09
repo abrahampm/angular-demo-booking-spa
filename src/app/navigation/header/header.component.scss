@@ -1,0 +1,19 @@
+mat-nav-list.horizontal {
+  background-color: white;
+  padding-top: 0;
+
+  .mat-list-item {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 1rem 0;
+  }
+
+  .nav-caption {
+    margin-left: .5rem;
+  }
+
+  .menu-icon {
+    margin: 1rem;
+  }
+}

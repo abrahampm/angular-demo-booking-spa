@@ -49,6 +49,11 @@ import { ReservationAvailabilityComponent } from './components/reservation-avail
 import {MatCardModule} from '@angular/material/card';
 import {AuthInterceptor, DEFAULT_TIMEOUT} from './auth/auth.interceptor';
 import {SharedModule} from './shared/shared.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -61,6 +66,8 @@ import {SharedModule} from './shared/shared.module';
     LoadingDialogComponent,
     RegisterComponent,
     ReservationAvailabilityComponent,
+    HeaderComponent,
+    SidenavComponent,
   ],
   imports: [
     // Angular modules
@@ -87,10 +94,12 @@ import {SharedModule} from './shared/shared.module';
     MatSelectModule,
     MatSortModule,
     MatTableModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
     // Rich text editor module
     CKEditorModule,
     ReactiveFormsModule,
-    SharedModule,
   ],
   // No entry component declaration needed since Angular 9.0.0,
   // Therefore there is not need to add LoadingDialogComponent to entryComponents array
