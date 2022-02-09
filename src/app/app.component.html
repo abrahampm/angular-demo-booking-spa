@@ -1,17 +1,19 @@
-<mat-sidenav-container fxLayoutAlign="center">
+<mat-sidenav-container>
   <mat-sidenav #sidenav role="navigation">
     <app-sidenav (sidenavClose)="sidenav.close()"></app-sidenav>
   </mat-sidenav>
-  <mat-sidenav-content fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%">
-    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-    <footer>
-      <p class="copyright-text">
-        &copy; Carlos Abraham P&eacute;rez Marrero - Demo Booking Application
-      </p>
-    </footer>
+  <mat-sidenav-content fxLayoutAlign="center">
+    <div fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center">
+      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+      <footer>
+        <p class="copyright-text">
+          &copy; Carlos Abraham P&eacute;rez Marrero - Demo Booking Application
+        </p>
+      </footer>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
