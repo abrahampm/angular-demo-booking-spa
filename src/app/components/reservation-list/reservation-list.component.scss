@@ -29,37 +29,6 @@
         color: #C4C4C4;
       }
     }
-    .stars {
-      margin-left: -.1rem;
-      margin-bottom: -.4rem;
-    }
-    .star {
-      height: 1.3rem;
-      width: 1.3rem;
-      margin-left: -.1rem;
-      color: #959595;
-
-      &.active {
-        color: #F6D015;
-      }
-    }
-    .heart {
-      display: inline-block;
-      height: 2rem;
-      width: 2rem;
-
-      &.active {
-        color: #F10000;
-      }
-    }
-    .favorite {
-      padding: .5rem;
-
-      .title {
-        display: inline-block;
-        margin-right: .5rem;
-      }
-    }
     .sort-by-select {
       margin: 1rem 0 0 .5rem;
     }
@@ -107,10 +76,7 @@ td {
   padding: .5rem 1rem!important;
 }
 
-.white {
-  background-color: white;
-}
-
 .reservation-list-container {
-  padding: 0 1rem;
+  padding: 0 2rem;
+  width: 100%;
 }

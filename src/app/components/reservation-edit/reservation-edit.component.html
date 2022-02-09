@@ -1,5 +1,5 @@
-<div fxLayout="row" fxLayoutAlign="center">
-  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%" class="white reservation-start-container">
+<div fxLayout="row" fxLayoutAlign="center" class="white">
+  <div fxLayout="column" fxLayoutGap="1rem" class="reservation-edit-container">
     <div fxLayout="row">
       <app-reservation-form class="full-width"
                             [disabled]="!reservationInformationLoaded"
@@ -7,7 +7,7 @@
                             (formStatusChange)="onReservationFormStatusChange($event)">
       </app-reservation-form>
     </div>
-    <div fxLayout="row" fxLayoutAlign="end start">
+    <div fxLayout="row" fxLayoutAlign="end start" class="reservation-update">
       <a mat-flat-button class="button" color="primary" (click)="onUpdateReservation()" [disabled]="reservationFormStatus!='VALID'" i18n>
         Update Reservation
       </a>

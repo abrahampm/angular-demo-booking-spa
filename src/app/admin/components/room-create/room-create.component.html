@@ -1,9 +1,9 @@
-<div fxLayout="row" fxLayoutAlign="center">
-  <div fxLayout="column" fxLayoutGap="1rem" fxFlex.lg="70%" fxFlex.md="80%" fxFlex.sm="90%" fxFlex.xs="100%" class="white reservation-start-container">
+<div fxLayout="row" fxLayoutAlign="center" class="white">
+  <div fxLayout="column" fxLayoutGap="1rem" class="room-create-container">
     <div fxLayout="row">
       <app-room-form [(room)]="room" (formStatusChange)="onRoomFormStatusChanged($event)" fxFlex="1 1 0"></app-room-form>
     </div>
-    <div fxLayout="row" fxLayoutAlign="end start">
+    <div fxLayout="row" fxLayoutAlign="end start" class="create-room">
       <button mat-flat-button class="button" color="primary" (click)="onCreateRoom()" [disabled]="roomFormStatus!='VALID'" i18n>
         Create Room
       </button>

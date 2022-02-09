@@ -1,37 +1,35 @@
-<div class="mat-elevation-z3 white">
-  <form [formGroup]="reservationForm" fxLayout="row" fxLayoutGap="1rem" class="reservation-form">
-    <mat-form-field appearance="fill">
-      <mat-label i18n>Check In - Check Out</mat-label>
-      <mat-date-range-input required [min]="minDate" [max]="maxDate" [disabled]="disabled" [rangePicker]="picker">
-        <input matStartDate
-               formControlName="startDate"
-               name="startDate"
-               placeholder="Start date"
-               i18n-placeholder>
-        <input matEndDate
-               formControlName="endDate"
-               name="endDate"
-               placeholder="End date"
-               i18n-placeholder
-               required>
-      </mat-date-range-input>
-      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
-      <mat-date-range-picker #picker></mat-date-range-picker>
-    </mat-form-field>
+<form [formGroup]="reservationForm" fxLayout="row" fxLayoutGap="1rem" class="reservation-form">
+  <mat-form-field appearance="fill">
+    <mat-label i18n>Check In - Check Out</mat-label>
+    <mat-date-range-input required [min]="minDate" [max]="maxDate" [disabled]="disabled" [rangePicker]="picker">
+      <input matStartDate
+             formControlName="startDate"
+             name="startDate"
+             placeholder="Start date"
+             i18n-placeholder>
+      <input matEndDate
+             formControlName="endDate"
+             name="endDate"
+             placeholder="End date"
+             i18n-placeholder
+             required>
+    </mat-date-range-input>
+    <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
 
-    <mat-form-field appearance="fill" fxFlex="1 1 0">
-      <mat-label>
-        Room
-      </mat-label>
-      <mat-select formControlName="roomSelect" [compareWith]="compareRoomObjects" required>
-        <mat-option *ngFor="let room of availableRooms | async" [value]="room">
-          {{getRoomTypeDescription(room)}} - {{room.number}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </form>
-  <div fxLayout="row">
-    <ckeditor [editor]="Editor" [(ngModel)]="reservation.description" [config]="EditorConfig" class="full-width"></ckeditor>
-  </div>
+  <mat-form-field appearance="fill" fxFlex="1 1 0">
+    <mat-label>
+      Room
+    </mat-label>
+    <mat-select formControlName="roomSelect" [compareWith]="compareRoomObjects" required>
+      <mat-option *ngFor="let room of availableRooms | async" [value]="room">
+        {{getRoomTypeDescription(room)}} - {{room.number}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+<div fxLayout="row" class="reservation-description">
+  <ckeditor [editor]="Editor" [(ngModel)]="reservation.description" [config]="EditorConfig" class="full-width"></ckeditor>
 </div>
 
