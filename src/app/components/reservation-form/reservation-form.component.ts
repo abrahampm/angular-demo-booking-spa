@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 import { Reservation } from '../../models/reservation.model';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {ReservationService} from '../../services/reservation.service';
@@ -26,10 +26,10 @@ export class ReservationFormComponent implements OnInit, OnChanges {
 
   minDate: Date;
   maxDate: Date;
-  reservationForm = new FormGroup({
-    startDate: new FormControl(),
-    endDate: new FormControl(),
-    roomSelect: new FormControl()
+  reservationForm = new UntypedFormGroup({
+    startDate: new UntypedFormControl(),
+    endDate: new UntypedFormControl(),
+    roomSelect: new UntypedFormControl()
   });
 
   availableRooms: BehaviorSubject<Room[]>;

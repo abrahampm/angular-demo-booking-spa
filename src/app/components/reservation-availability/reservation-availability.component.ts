@@ -5,7 +5,7 @@ import {Room, ROOM_TYPE_DESCRIPTION} from '../../models/room.model';
 import {Observable, Subject} from 'rxjs';
 import {catchError, map, switchMap} from 'rxjs/operators';
 import {DialogService} from '../../services/dialog.service';
-import {FormControl, FormGroup} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
@@ -17,9 +17,9 @@ export class ReservationAvailabilityComponent implements OnInit {
   reservation: Reservation;
   minDate: Date;
   maxDate: Date;
-  dateRange = new FormGroup({
-    start: new FormControl(),
-    end: new FormControl(),
+  dateRange = new UntypedFormGroup({
+    start: new UntypedFormControl(),
+    end: new UntypedFormControl(),
   });
   availableRooms: Subject<Room[]>;
 
