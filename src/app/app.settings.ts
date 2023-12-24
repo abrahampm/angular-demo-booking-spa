@@ -1,3 +1,3 @@
-export const API_URL = 'https://alten-test-abrahampm.herokuapp.com/api';
+export const API_URL = 'https://demo-api.mywire.org/booking-api-test';
 
 
