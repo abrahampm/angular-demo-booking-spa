@@ -39,17 +39,16 @@ export class ReservationFormComponent implements OnInit, OnChanges {
     this.minDate = reservationService.getMinStartDate();
     this.maxDate = reservationService.getMaxStartDate();
     this.availableRooms = new BehaviorSubject<Room[]>([]);
-  }
 
-  ngOnInit(): void {
     this.reservationForm.controls.endDate.valueChanges.pipe(debounceTime(500)).subscribe(() => {
       this.checkRoomAvailability();
     });
-
     this.reservationForm.statusChanges.pipe(debounceTime(500)).subscribe((status) => {
       this.formStatusChange.emit(status);
     });
+  }
 
+  ngOnInit(): void {
     this.reservationForm.controls.roomSelect.valueChanges.subscribe((event) => {
       this.onRoomChange(event);
     });
@@ -85,7 +84,7 @@ export class ReservationFormComponent implements OnInit, OnChanges {
               this.availableRooms.next([this.reservation.room]);
               this.dialogService.closeLoadingDialog();
             } else {
-              this.dialogService.updateLoadingDialogData('There are not rooms available in that dates. Please try again.', 'ERROR');
+              this.dialogService.updateLoadingDialogData('There are no rooms available in that dates. Please try again.', 'ERROR');
               this.dialogService.closeLoadingDialogAfterTimeout();
             }
           } else {
