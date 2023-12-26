@@ -36,8 +36,10 @@ export class ReservationListComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.dataSource = new ReservationListDataSource(this.reservationService);
-    this.authService.isAdmin().subscribe(() => {
-      this.displayedColumns.splice(4, 0, 'reservation-user');
+    this.authService.isAdmin().subscribe((isAdmin) => {
+      if (isAdmin) {
+        this.displayedColumns.splice(4, 0, 'reservation-user');
+      }
     });
   }
 
