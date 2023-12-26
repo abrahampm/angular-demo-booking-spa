@@ -69,13 +69,18 @@ export class ReservationFormComponent implements OnInit, OnChanges {
   }
 
   checkRoomAvailability() {
-    const startDate = this.reservationForm.value.startDate;
-    const endDate = this.reservationForm.value.endDate;
-    console.log(startDate, endDate);
+    let startDate = this.reservationForm.value.startDate;
+    let endDate = this.reservationForm.value.endDate;
     if (startDate && endDate) {
+      if (startDate instanceof Date) {
+        startDate = startDate.toISOString();
+      }
+      if (endDate instanceof Date) {
+        endDate = endDate.toISOString();
+      }
       this.dialogService.openLoadingDialog('Checking room availability');
-      this.reservation.startDate = startDate.toISOString().split('T')[0];
-      this.reservation.endDate = endDate.toISOString().split('T')[0];
+      this.reservation.startDate = startDate.split('T')[0];
+      this.reservation.endDate = endDate.split('T')[0];
       this.reservationChange.emit(this.reservation);
       this.reservationService.availability(this.reservation.startDate, this.reservation.endDate).subscribe(
         (rooms) => {
