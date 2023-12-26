@@ -62,7 +62,6 @@ export class ReservationFormComponent implements OnInit, OnChanges {
         endDate: this.reservation.endDate,
         roomSelect: this.reservation.room
       });
-      this.checkRoomAvailability();
     }
   }
 
