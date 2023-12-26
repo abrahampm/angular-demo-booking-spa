@@ -1,8 +1,10 @@
 # Demo Booking App
 **Author: Carlos Abraham Pérez Marrero**
 
+![](./src/assets/screenshots/app-screenshot.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+## Live Demo
+Visit: https://booking-demo-abrahampm.vercel.app/
 
 ## Development server
 
