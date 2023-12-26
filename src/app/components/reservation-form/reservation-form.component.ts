@@ -42,6 +42,8 @@ export class ReservationFormComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
+    this.checkRoomAvailability();
+
     this.reservationForm.controls.endDate.valueChanges.pipe(debounceTime(500)).subscribe(() => {
       this.checkRoomAvailability();
     });
