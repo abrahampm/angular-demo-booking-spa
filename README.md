@@ -1,6 +1,6 @@
-# ALTEN CANADA Technical Test
+# Demo Booking App
 **Author: Carlos Abraham Pérez Marrero**
-## Booking Single Page Application
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
