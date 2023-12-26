@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "alten-test": {
+    "demo-booking-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/alten-test",
+            "outputPath": "dist/demo-booking-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "alten-test:build"
+            "browserTarget": "demo-booking-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "alten-test:build:production"
+              "browserTarget": "demo-booking-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "alten-test:build"
+            "browserTarget": "demo-booking-app:build"
           }
         },
         "test": {
@@ -102,16 +102,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "alten-test:serve"
+            "devServerTarget": "demo-booking-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "alten-test:serve:production"
+              "devServerTarget": "demo-booking-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "alten-test"
+  "defaultProject": "demo-booking-app"
 }
