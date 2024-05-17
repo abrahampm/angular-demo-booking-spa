@@ -1,3 +1,3 @@
-export const API_URL = 'https://demo-api.mywire.org/booking-api-test/api';
+export const API_URL = 'https://demo-booking-api.azurewebsites.net/api';
 
 
